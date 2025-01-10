@@ -85,7 +85,8 @@ bool renice = false;
 #endif /* RENICE */
 
 #ifdef INTERACTIVE
-struct lirc_config *lircconfig;
+/*struct lirc_config *lircconfig;*/
+#include <lirc_client.h>
 int linelen = 40;
 char *lircrc;
 int lirc_fd = 0;

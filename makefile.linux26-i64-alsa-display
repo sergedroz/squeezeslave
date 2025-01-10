@@ -11,7 +11,7 @@ LDFLAGS=-s
 
 # Comment out these two lines to remove display support
 CFLAGS+=-DINTERACTIVE
-LIBS+=-lcurses -llirc_client
+LIBS+=-lcurses -llirc_client -lportaudio -lmad -lvorbis -lvorbisfile -lFLAC
 
 INCLUDE=-Ilib/getopt -Ilib/libportaudio/$(OS)/include -Ilib/portmixer/px_common -Isrc -Ilib/libmad/$(OS)/include -Ilib/vorbis/$(OS)/include -Ilib/flac/$(OS)/include
 
@@ -33,7 +33,7 @@ LIBSLIMPROTO=lib/libslimproto.a
 
 LIBGETOPT=lib/libgetopt.a
 
-SUPPORTLIBS=lib/libportaudio/$(OS)/lib/libportaudio.a lib/libmad/$(OS)/lib/libmad.a lib/vorbis/$(OS)/lib/libvorbisfile.a lib/vorbis/$(OS)/lib/libvorbis.a lib/vorbis/$(OS)/lib/libvorbisenc.a lib/vorbis/$(OS)/lib/libogg.a lib/flac/$(OS)/lib/libFLAC.a
+#SUPPORTLIBS=lib/libportaudio/$(OS)/lib/libportaudio.a lib/libmad/$(OS)/lib/libmad.a lib/vorbis/$(OS)/lib/libvorbisfile.a lib/vorbis/$(OS)/lib/libvorbis.a lib/vorbis/$(OS)/lib/libvorbisenc.a lib/vorbis/$(OS)/lib/libogg.a lib/flac/$(OS)/lib/libFLAC.a
 
 SQUEEZESLAVE=bin/squeezeslave
 
